@@ -10,7 +10,7 @@ class CountriesSpiderSpider(scrapy.Spider):
         title = response.xpath("//h1/text()").get()
         countries = response.xpath("//td/a/text()").getall()
 
-        # To return the scrapy data.return it as a dictionary
+        # To return the scrapy data,return it as a dictionary
 
         yield {
             'title' : title,
